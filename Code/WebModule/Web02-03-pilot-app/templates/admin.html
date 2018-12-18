@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h1>Administrator</h1>
+    <a href="{{ url_for('ordered') }}">Xem các yêu cầu dịch vụ</a>
+    <br><br><br>
+    <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    <br><br><br>
+    <table border='1px'>
+        <thead>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Năm sinh</th>
+            <th>Giới tính</th>
+            <th>Chiều cao</th>
+            <th>Số điện thoại</th>
+            <th>Địa chỉ</th>
+            <th>Trạng thái</th>
+            <th>Mô tả</th>
+            <th>Chỉ số</th>
+            <th><a href="{{ url_for('create') }}">Thêm</a></th>
+        </thead>
+        <tbody>
+            {% for service in all_service %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ service.name }}</td>
+                    <td>{{ service.yob }}</td>
+                    <td>{{ 'Nam' if service.gender else 'Nữ' }}</td>
+                    <td>{{ service.height }}</td>
+                    <td>{{ service.phone }}</td>
+                    <td>{{ service.address }}</td>
+                    <td>{{ service.status }}</td>
+                    <td>
+                        <ul>
+                            {% for item in service.description %}
+                                <li>
+                                    {% print(item) %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            {% for item in service.measurements %}
+                                <li>
+                                    {% print(item) %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('update', service_id=service.id) }}">Sửa</a>
+                        <a href="{{ url_for('delete', service_id=service.id) }}">Xóa</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h1>Các yêu cầu dịch vụ</h1>
+    <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    <br><br><br>
+    <table border='1px'>
+        <thead>
+            <th>STT</th>
+            <th>Username</th>
+            <th>Tên người dùng</th>
+            <th>Mã dịch vụ</th>
+            <th>Thời gian gửi yêu cầu</th>
+            <th>Thao tác</th>
+        </thead>
+        <tbody>
+            {% for order in all_order %}
+                {% for user in user_order %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.fullname }}</td>
+                        <td>{{ order.service_id }}</td>
+                        <td>{{ order.order_time }}</td>
+                        <td>
+                            <a href = "{{ url_for('accepted_order', order_id = order.id, user_id = order.user_id) }}"> Phê duyệt yêu cầu</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

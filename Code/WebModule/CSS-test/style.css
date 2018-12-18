@@ -1,0 +1,41 @@
+/* selector {
+    property: value;
+} */
+
+/* tag name selector */
+h1 {
+    color: red;
+}
+h2 {
+    color: blue;
+}
+
+/* id selector */
+#heading-2 {
+    color: green;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 40px;
+}
+
+/* class selector */
+.text-right {
+    text-align: right;
+}
+
+#background-ele {
+    height: 500px;
+    width: 100%;
+
+    background-color: lightblue;
+    background-image: url('https://www.filmhousecinema.com/sites/filmhousecinema.com/files/shows/2017/Mountain-3.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.bg-lightblue {
+    height: 1000px;
+    width: 100%;
+
+    background-color: lightblue;
+}
+

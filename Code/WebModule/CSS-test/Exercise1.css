@@ -1,0 +1,15 @@
+.text-font {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.text-red {
+    color: red;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h1>Thay đổi thông tin</h1>
+    <form method='post'>
+        <label> Tên </label>
+        <br>
+        <input type = 'text' name = 'name' value = '{{update_service.name}}'>
+        <br>
+        <label> Năm sinh </label>
+        <br>
+        <input type = 'text' name = 'yob' value = '{{update_service.yob}}'>
+        <br>
+        <label> Số điện thoại</label>
+        <br>
+        <input type = 'text' name = 'phone' value = '{{update_service.phone}}'>
+        <br>
+        <label> Chiều cao</label>
+        <br>
+        <input type = 'text' name = 'height' value = '{{update_service.height}}'>
+        <br>
+        <label> Địa chỉ</label>
+        <br>
+        <input type = 'text' name = 'address' value = '{{update_service.address}}'>
+        <br>
+        <label> Trạng thái</label>
+        <br>
+        <input type="radio" name="status" value="Bận"> Bận
+        <input type="radio" name="status" value="Rảnh"> Rảnh
+        <br>
+        <br>
+        <input type = 'submit' value = "Cập nhật">
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h1>Mùa đông không lạnh</h1>
+    <a href="{{ url_for('login') }}">Login as Administrator</a>
+    <br><br>
+    <a href="{{ url_for('signin') }}">Login as User</a>
+    <br><br>
+    <a href="{{ url_for('signup') }}">Register</a>
+    <br><br>
+    <a href="{{ url_for('search') }}">List of Service</a>
+    <br><br>
+    <a href="{{ url_for('searchsex', g=1) }}">Men List</a>
+    <br><br>
+    <a href="{{ url_for('searchsex', g=0) }}">Women List</a>
+    <br><br>
+    <a href="{{ url_for('customer') }}">Customer List</a>
+</body>
+</html>

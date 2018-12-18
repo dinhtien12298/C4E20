@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+
+    {% include "meta-data.html" %}
+</head>
+<body>
+    <div class="d-flex justify-content-center flex-column mb-50px">
+        <h1 class="text-center bg-dark text-light" style="height: 80px">Lựa chọn dịch vụ</h1>
+        <a href="{{ url_for('logout') }}" style="font-size: 150%;" class="text-right text-dark">Đăng xuất</a>
+        <br><br><br>
+        <div class = 'd-flex flex-wrap justify-content-around'>
+            {% for service in all_service %}
+                <div class="card" style="width: 23rem">
+                    <div class="card-header text-white font-weight-bold bg-dark" style = "font-size: 150%">
+                        {{ service.name }}
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style = 'height: 230px'>
+                                {% if service.gender %}
+                                    <img src="../static/image/male.jpg" style="width: 70%" alt="">
+                                {% else %}
+                                    <img src="../static/image/female.jpg" style="width: 70%" alt="">
+                                {% endif %}
+                                <br><br>
+                                <p class="card-text text-body">Giới tính: {{ 'Nam' if service.gender else 'Nữ' }}</p>
+                                <p class="card-text text-body">Năm sinh: {{ service.yob }}</p>
+                                <p class="card-text text-body">Chiều cao: {{ service.height }} cm</p>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="{{ url_for('detail', service_id=service.id) }}" 
+                                    class="text-light btn btn-dark w-50 d-flex justify-content-end" 
+                                    style = 'margin-left: 170px'>
+                                    <i class="fas fa-heart mt-2 mr-2"></i>
+                                    Tìm hiểu thêm
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+</body>
+</html>

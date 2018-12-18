@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+</head>
+<body>
+    <h1>Customer Page</h1>
+    {% for customer in all_customer %}
+        <div>
+            <!-- image -->
+            {% if customer.gender %}
+                <img src="../static/image/male-profile.jpg" alt="">
+            {% else %}
+                <img src="../static/image/female-profile.jpg" alt="">
+            {% endif %}
+            <p>Tên: {{ customer.name }}</p>
+            <p>Giới tính: {{ 'Nam' if customer.gender else 'Nữ' }}</p>
+            <p>Số điện thoại: {{ customer.phone }}</p>
+            <p>Nghề nghiệp: {{ customer.job }}</p>
+            <p>Công ty: {{ customer.company }}</p>
+            <p>Liên hệ: {{ 'Đã liên hệ' if customer.contacted else 'Chưa liên hệ' }}</p>
+        </div>
+        <hr><br>
+    {% endfor %}
+</body>
+</html>

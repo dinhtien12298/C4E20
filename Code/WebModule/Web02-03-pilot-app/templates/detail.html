@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mùa đông không lạnh</title>
+
+    {% include "meta-data.html" %}
+</head>
+<body>
+    <div class="d-flex justify-content-center flex-column mb-50px" style="font-family: 'Pacifico', cursive;">
+        <h1 class="text-center bg-dark text-light" style="height: 80px">Thông tin chi tiết</h1>
+        <a href="{{ url_for('logout') }}" style="font-size: 150%; background-color: rgb(166, 212, 208)" class="text-right text-dark">Đăng xuất</a>
+            <div class="jumbotron">
+                <h1 class="display-4">{{ detail_service.name }}</h1>
+                <br>
+                <p class="lead">
+                    {% if detail_service.gender %}
+                        <img src="../static/image/male.jpg" style="width: 40%" alt="">
+                    {% else %}
+                        <img src="../static/image/female.jpg" style="width: 40%" alt="">  
+                    {% endif %}
+                    <br><br>
+                    Good Luck!!!!!
+                </p>
+                <hr class="my-4">
+                <p>Năm sinh: {{ detail_service.yob }}</p>
+                <p>Giới tính: {{ 'Nam' if detail_service.gender else 'Nữ' }}</p>
+                <p>Chiều cao: {{ detail_service.height }} cm</p>
+                <p>Số điện thoại: {{ detail_service.phone }}</p>
+                <p>Địa chỉ: {{ detail_service.address }}</p>
+                <p>Trạng thái: {{ detail_service.status }}</p>
+                <p>Mô tả:
+                    <ul>
+                        {% for description in detail_service.description %}
+                            <li>
+                                {{ description }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </p>
+                <p>Chỉ số:
+                    <ul>
+                        {% for measurements in detail_service.measurements %}
+                            <li>
+                                {{ measurements }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </p>
+                <a class="btn btn-primary btn-lg" href="{{ url_for('order', service_id=detail_service.id) }}" role="button">Yêu cầu dịch vụ</a>
+            </div>
+    </div>
+</body>
+</html>

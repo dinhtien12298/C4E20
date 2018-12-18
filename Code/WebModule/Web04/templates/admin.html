@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Morning Star</title>
+</head>
+<body>
+    <h1>CMS App</h1>
+    <form method='post'>
+        <label>Link</label>
+        <input type="text" name="link">
+        <input type="submit" value='Submit'>
+    </form>
+    <br><br><br>
+    <a href="{{ url_for('logout') }}">Đăng xuất</a>
+    <br><br><br>
+    <table border='1px'>
+        <thead>
+            <th>STT</th>
+            <th>Title</th>
+            <th>Views</th>
+            <th>Link</th>
+            <th>Thumbnail</th>
+        </thead>
+        <tbody>
+            {% for video in videos %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ video.title }}</td>
+                <td>{{ video.views }}</td>
+                <td>
+                    <a href="{{ video.link }}" target="#">View</a>
+                </td>
+                <td>
+                    <img 
+                        src="{{ video.thumbnail }}"
+                        height='130' 
+                        width='220'
+                    > 
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,357 @@
+.d-inline-block{
+    display: inline-block;
+}
+
+.image-401{
+    background-image: url('static/images/cookbooks-blog.jpg');
+    background-size: cover;
+}
+
+.image-402{
+    background-image: url('static/images/potato.jpg');
+    background-size: cover;
+}
+
+.image-403{
+    background-image: url('static/images/pinterest.jpg');
+    background-size: cover;
+}
+
+.image-404{
+    background-image: url('static/images/dinner-blog.jpg');
+    background-size: cover;
+}
+
+.image-twitter{
+    background-image: url('static/images/icons/icon-twitter.png');
+    background-size: cover; 
+}
+
+.image-facebook{
+    background-image: url('static/images/icons/icon-facebook.png');
+    background-size: cover; 
+}
+
+.image-wifi{
+    background-image: url('static/images/icons/icon-rss.png');
+    background-size: cover; 
+}
+
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.font-family{
+    font-family: 'Roboto Slab', serif;
+}
+
+.border-bottom{
+    border-bottom: 0.5px dashed rgb(116, 115, 115);
+}
+
+.border-top{
+    border-top: 0.5px solid rgb(116, 115, 115);
+}
+
+.color-gray{
+    color: gray;
+}
+
+.color-white{
+    color: white;
+}
+
+.font-weight{
+    font-weight: bold;
+}
+
+.font-color{
+    color: rgb(52, 165, 131);
+}
+
+.font-15px{
+    font-size: 15px;
+}
+
+.font-13px{
+    font-size: 13px;
+}
+
+.font-12px{
+    font-size: 12px;
+}
+
+.font-10px{
+    font-size: 10px;
+}
+
+.font-italic{
+    font-style: italic;
+}
+
+.h-40px{
+    height: 40px;
+}
+
+.h-150px{
+    height: 150px;
+}
+
+.h-60px{
+    height: 60px;
+}
+
+.h-900px{
+    height: 900px;
+}
+
+.w-40{
+    width: 40%;
+}
+
+.w-60{
+    width: 60%;
+}
+
+.w-70{
+    width: 70%;
+}
+
+.m-center{
+    margin: 0 auto;
+}
+
+.w-17{
+    width: 17.4%;
+}
+
+.w-80{
+    width: 82.5%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+#box-model-1{
+    height: 135px;
+    width: 80%;
+    background-image: url('static/images/page-logo.png');
+    background-size: cover;
+}
+
+#box-model-2{
+    height: 230px;
+    width: 90%;
+    margin: 40px 0px;
+}
+
+#box-model-3{
+    height: 450px;
+    width: 90%;
+    margin: 30px 0px;
+}
+
+#flex-box-1{
+    display: flex;
+    align-items: baseline;
+    height: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url('static/images/header.jpg');
+    background-size: cover;
+}
+
+#flex-box-2{
+    display: flex;
+    height: 370px;
+    flex-flow: wrap;
+}
+
+#flex-box-3{
+    display: flex;
+    flex-flow: wrap;
+}
+
+#child-box-1{
+    display: flex;
+    height: 30px;
+    margin: 0px 0px 16px 0px;
+    align-items: center;
+}
+
+#child-box-font{
+    font-family: 'Roboto Slab', serif;
+    margin: 5px 0px 0px 0px;
+    font-size: 15px;
+    color: rgb(52, 165, 131);
+    font-style: italic;
+}
+
+#child-box-1-1{
+    height: 30px;
+    width: 22%;
+    margin: 0px 15px 0px 0px;
+    background-image: url('static/images/icons/nav-tastemakers.png');
+}
+
+#child-box-1-2{
+    height: 32px;
+    width: 22%;
+    margin: 0px 15px 0px 0px;
+    background-image: url('static/images/icons/nav-blog.png');
+}
+
+#child-box-1-3{
+    height: 32px;
+    width: 22%;
+    margin: 0px 15px 0px 0px;
+    background-image: url('static/images/icons/nav-alist.png');
+}
+
+#child-box-1-4{
+    height: 32px;
+    width: 22%;
+    margin: 0px 15px 0px 0px;
+    background-image: url('static/images/icons/nav-contribute.png');
+}
+
+#child-box-1-5{
+    height: 32px;
+    width: 22%;
+    margin: 0px 15px 0px 0px;
+    background-image: url('static/images/icons/nav-about.png');
+}
+
+#child-box-2{
+    height: 150px;
+    margin: 0px 0px 5px 0px;
+}
+
+#child-box-2-button{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: 0.5px solid rgb(172, 172, 172);
+    border-radius: 5px;
+}
+
+#child-box-2-button-twitter{
+    height: 15px;
+    width: 12%;
+    margin: 0px 5px 0px 3px;
+    background-image: url('static/images/icons/icon-twitter.png');
+    background-size: cover;
+}
+
+#child-box-2-button-facebook{
+    height: 18px;
+    width: 12%;
+    margin: 0px 5px 0px 3px;
+    background-image: url('static/images/icons/icon-facebook.png');
+    background-size: cover;
+}
+
+#child-box-2-button-font{
+    font-family: 'Roboto Slab', serif;
+    margin: 3px 0px 0px 0px;
+    font-size: 11px;
+    color: rgb(52, 165, 131);
+    font-style: italic;
+}
+
+#child-box-3{
+    display: flex;
+    height: 40px;
+    width: 23%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#child-box-4{
+    display: flex;
+    height: 35px;
+    width: 45%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+#child-box-5{
+    height: 100px;
+    width: 24.97%;
+    background-color: rgb(214, 231, 236);
+    display: inline-block flex;
+    border: 0.1px solid rgb(184, 223, 235);
+    padding: 30px 0px 0px 20px;
+    box-sizing: border-box;
+}
+
+#child-box-6{
+    height: 30px;
+    width: 4%;
+    display: inline-block flex;
+    background-image: url('static/images/icons/nav-about.png');
+    background-size: cover;
+    margin: 0px 3px 0px 3px;
+}
+
+#child-box-7{
+    height: 30px;
+    width: 50%;
+    display: inline-block flex;
+}
+
+#child-box-8{
+    height: 20px;
+    width: 25%;
+    display: inline-block flex;
+    border: 0.5px outset;
+    margin: 0px 10px 0px 10px;
+}
+
+#child-box-9{
+    background-color: rgb(218, 214, 214);
+    height: 18px;
+    width: 10%;
+    display: inline-block flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0px 10px 0px 30px;
+}
+
+#child-box-10{
+    height: 130px;
+    width: 24%;
+    border: 1px solid rgb(206, 206, 206);
+    display: inline-block flex;
+}
+
+#child-box-11{
+    height: 220px;
+    width: 24%;
+    display: inline-block flex;
+}
+
+#child-box-12{
+    height: 30px;
+    width: 10%;
+    display: inline-block flex;
+    margin: 0px 15px 0px 0px;
+}
+
+#child-box-13{
+    height: 40px;
+    width: 5%;
+    display: inline-block flex;
+    margin: 0px 10px 0px 40%;
+}
+
+#child-box-14{
+    height: 45px;
+    width: 5%;
+    display: inline-block flex;
+    margin: 0px 10px 0px 10px;
+}
